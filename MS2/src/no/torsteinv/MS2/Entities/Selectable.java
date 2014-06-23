@@ -33,6 +33,6 @@ public interface Selectable {
 
 	public PaintState getAssosiatedInterface();
 
-	public CommandType CommandAt(int i, int j);
+	public CommandType CommandAt(int i, int j,boolean leftClick);
 
 }

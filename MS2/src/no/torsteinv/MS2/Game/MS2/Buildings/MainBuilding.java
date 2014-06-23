@@ -52,7 +52,7 @@ public class MainBuilding extends Building implements ClickableBuilding {
 	}
 
 	@Override
-	public CommandType CommandAt(int i, int j) {
+	public CommandType CommandAt(int i, int j, boolean leftClick) {
 		return CommandType.None;
 	}
 

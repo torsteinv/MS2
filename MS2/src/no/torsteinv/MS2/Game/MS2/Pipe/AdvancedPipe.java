@@ -282,7 +282,7 @@ public class AdvancedPipe extends Pipe implements Selectable {
 	}
 
 	@Override
-	public CommandType CommandAt(int i, int j) {
+	public CommandType CommandAt(int i, int j, boolean leftClick) {
 		return CommandType.None;
 	}
 

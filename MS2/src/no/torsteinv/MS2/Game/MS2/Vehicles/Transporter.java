@@ -42,8 +42,8 @@ public class Transporter extends ContainerVehicleWrapper {
 	}
 
 	@Override
-	public CommandType CommandAt(int i, int j) {
-		return Main.getEntityAt(i, j) instanceof Container ? CommandType.DropOff
+	public CommandType CommandAt(int i, int j, boolean leftClick) {
+		return Main.getEntityAt(i, j) instanceof Container ? (leftClick ? CommandType.DropOff : CommandType.Take)
 				: CommandType.Goto;
 	}
 }

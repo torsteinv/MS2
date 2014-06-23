@@ -40,7 +40,7 @@ public class Explorer extends Vehicle {
 	}
 
 	@Override
-	public CommandType CommandAt(int i, int j) {
+	public CommandType CommandAt(int i, int j, boolean leftClick) {
 		return CommandType.Goto;
 	}
 }

@@ -224,7 +224,7 @@ public class MouseHandler implements MouseListener {
 					((Selectable) e).getCommandCenter().Perform(
 							((Selectable) e).CommandAt(x
 									+ (int) Main.HorisontalAlignment, y
-									+ (int) Main.VerticalAlignment), "X",
+									+ (int) Main.VerticalAlignment, RL), "X",
 							"" + (int) (x + Main.HorisontalAlignment), "Y",
 							"" + (int) (y + Main.VerticalAlignment));
 					try {
@@ -243,7 +243,7 @@ public class MouseHandler implements MouseListener {
 				if (e instanceof Selectable && e.getPlayer() == Main.player
 						&& ((Selectable) e).isSelected() && Main.game()) {
 					((Selectable) e).getCommandCenter().Perform(
-							((Selectable) e).CommandAt(ax, ay), "X", "" + ax,
+							((Selectable) e).CommandAt(ax, ay, RL), "X", "" + ax,
 							"Y", "" + ay);
 					try {
 						Player.play(Sound.buttonClick);

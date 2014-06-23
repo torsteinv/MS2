@@ -50,7 +50,7 @@ public class ContainerBuilding extends ContainerBuildingWrapper implements
 	}
 
 	@Override
-	public CommandType CommandAt(int i, int j) {
+	public CommandType CommandAt(int i, int j, boolean leftClick) {
 		return CommandType.None;
 	}
 
