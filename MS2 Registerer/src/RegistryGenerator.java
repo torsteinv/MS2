@@ -6,13 +6,14 @@ import java.util.Formatter;
 
 public class RegistryGenerator {
 	public static void main(String[] args) {
-		args[0] = args[0].replace("\\", "/").replace("\\\\", "/");
+		if (args.length > 0)
+			args[0] = args[0].replace("\\", "/").replace("\\\\", "/");
 		File fl = new File(args.length == 1 ? args[0]
-				: "C:/Users/torstein/Desktop/MS2 Obfuscator");
+				: "C:/Users/tv/Desktop/MS2 Obfuscator");
 		ArrayList<File> files = getAllFiles(fl);
 
 		File reg = new File(args.length == 1 ? args[0] + "/Registry.html"
-				: "C:/Users/torstein/Desktop/MS2 Obfuscator/Registry.html");
+				: "C:/Users/tv/Desktop/MS2 Obfuscator/Registry.html");
 		Formatter fr = null;
 		try {
 			reg.createNewFile();
@@ -22,12 +23,13 @@ public class RegistryGenerator {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		files.remove(new File(args.length == 1 ? args[0] + "/RegistryGenerator.class"
-				: "C:/Users/torstein/Desktop/MS2 Obfuscator/RegistryGenerator.class"));
+		files.remove(new File(args.length == 1 ? args[0]
+				+ "/RegistryGenerator.class"
+				: "C:/Users/tv/Desktop/MS2 Obfuscator/RegistryGenerator.class"));
 		files.remove(new File(args.length == 1 ? args[0] + "/Obfuscate.bat"
-				: "C:/Users/torstein/Desktop/MS2 Obfuscator/Obfuscate.bat"));
+				: "C:/Users/tv/Desktop/MS2 Obfuscator/Obfuscate.bat"));
 		files.remove(new File(args.length == 1 ? args[0] + "/Registry.html"
-				: "C:/Users/torstein/Desktop/MS2 Obfuscator/Registry.html"));
+				: "C:/Users/tv/Desktop/MS2 Obfuscator/Registry.html"));
 
 		try {
 			for (File f : files) {
