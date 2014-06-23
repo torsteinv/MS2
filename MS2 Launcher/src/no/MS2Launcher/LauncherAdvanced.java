@@ -33,7 +33,7 @@ public class LauncherAdvanced {
 		}
 		f.format(version);
 		f.flush();
-		
+
 		new File(System.getenv("APPDATA") + "/MS2").delete();
 
 		String l = "";
@@ -52,6 +52,7 @@ public class LauncherAdvanced {
 				downloadFile(file, new URL("http://torsteinv.host22.com/data/"
 						+ l));
 			}
+			s.close();
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
